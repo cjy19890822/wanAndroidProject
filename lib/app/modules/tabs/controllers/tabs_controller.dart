@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 class TabsController extends GetxController {
   //TODO: Implement TabsController
 
-  final count = 0.obs;
+  final currentIndex = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -19,5 +19,5 @@ class TabsController extends GetxController {
     super.onClose();
   }
 
-  void increment() => count.value++;
+
 }

@@ -18,4 +18,15 @@ dev_dependencies:
 
 flutter: 
   uses-material-design: true
+  assets:
+    - Assets/financing.png
+    - Assets/financing_h.png
+    - Assets/homeP.png
+    - Assets/homeP_h.png
+    - Assets/life.png
+    - Assets/life_h.png
+    - Assets/my.png
+    - Assets/my_h.png
+    - Assets/welcome_1.png
+    - Assets/welcome_2.jpg
 
