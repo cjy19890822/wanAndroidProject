@@ -35,13 +35,14 @@ class TabsView extends GetView<TabsController> {
   Widget _buildBottomNavigaitonBar(){
     return  Obx(() => BottomNavigationBar(
       items: _buildNavigationItems(),
+      type:BottomNavigationBarType.fixed ,
       currentIndex: controller.currentIndex.value,
       iconSize: 24,
-      selectedItemColor: Colors.yellow,
+      selectedItemColor: Colors.blueAccent,
       unselectedItemColor: Colors.black,
-    
-      selectedFontSize: 24,
-      unselectedFontSize: 20,
+     // mouseCursor: ,
+      selectedFontSize: 14,
+      unselectedFontSize: 12,
       onTap:(index){
         print("update $index");
         controller.currentIndex.value = index;

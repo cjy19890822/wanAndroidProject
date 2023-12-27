@@ -33,9 +33,9 @@ extension TabSubTypeExt on TabSubType{
   String get title {
     switch(this){
       case TabSubType.home:
-        return "home";
+        return "首页";
       case TabSubType.my:
-        return "my";
+        return "我的";
     }
   }
 }
