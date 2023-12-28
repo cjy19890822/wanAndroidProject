@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 /// 配置列表网络请求规范
-mixin  AbstractListNetWork {
+mixin AbstractListNetWork {
   @protected
   Map<String, dynamic> configNetWorkParmas();
 
