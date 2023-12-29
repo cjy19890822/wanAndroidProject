@@ -9,13 +9,13 @@ abstract class BaseView<T> extends GetView<T>{
   BaseView({super.key});
 
   /// 状态栏高度
-  double statusBarH = ScreenUtil().statusBarHeight;
+ // double statusBarH = ScreenUtil().statusBarHeight;
 
   /// 导航栏高度
   double navBarH = AppBar().preferredSize.height;
 
   /// 安全区域高度
-  double safeBarH = ScreenUtil().bottomBarHeight;
+ // double safeBarH = ScreenUtil().bottomBarHeight;
 
   /// 设置背景颜色
   Color? contentColor;
@@ -28,6 +28,9 @@ abstract class BaseView<T> extends GetView<T>{
 
   /// 设置导航栏颜色
   Color? navColor;
+
+  /// 设置tabbar颜色
+  bool? hasNavigationbar;
 
   /// 设置左边按钮
   Widget? leftButton;
@@ -43,6 +46,9 @@ abstract class BaseView<T> extends GetView<T>{
 
   //设置主主视图内容(子类不实现会报错)
   Widget buildContent();
+
+  //设置Navigationbar(子类不实现会报错)
+  Widget buildNavgationbar();
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +66,9 @@ abstract class BaseView<T> extends GetView<T>{
           leading: leftButton ?? const SizedBox(),
           leadingWidth: leftWidth ?? 0,
           actions: rightActionList ?? [],
+
         ),
+        bottomNavigationBar:(hasNavigationbar == true)?buildNavgationbar():null,
         body: buildContent());
   }
 

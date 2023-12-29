@@ -22,7 +22,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.TABS,
-      page: () => const TabsView(),
+      page: () =>  TabsView(),
       binding: TabsBinding(),
     ),
     GetPage(
