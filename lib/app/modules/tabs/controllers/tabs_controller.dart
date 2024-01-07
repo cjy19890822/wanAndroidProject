@@ -7,7 +7,7 @@ class TabsController extends GetxController {
   //TODO: Implement TabsController
 
   final currentIndex = 0.obs;
-   List<Widget> tablistPage = [const HomeView(),MyView()];
+   List<Widget> tablistPage = [ HomeView(),MyView()];
   @override
   void onInit() {
     super.onInit();

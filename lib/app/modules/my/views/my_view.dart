@@ -1,24 +1,29 @@
 import 'package:flutter/material.dart';
 
-import 'package:get/get.dart';
+import 'package:wanandroidproject/app/base/base_common_view.dart';
 
 import '../controllers/my_controller.dart';
 
-class MyView extends GetView<MyController> {
-  const MyView({Key? key}) : super(key: key);
+class MyView extends BaseCommonView<MyController> {
+   MyView({Key? key}) : super(key: key);
+
+
+   @override
+   get navTitle=>"my";
+
   @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('MyView'),
-        centerTitle: true,
-      ),
-      body: const Center(
+  Widget buildContent() {
+    // TODO: implement buildContent
+    return  Center(
         child: Text(
-          'MyView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
-    );
+        'MyView is working',
+        style: TextStyle(fontSize: 20),
+    ));
+  }
+
+  @override
+  Widget buildNavgationbar() {
+    // TODO: implement buildNavgationbar
+    throw UnimplementedError();
   }
 }

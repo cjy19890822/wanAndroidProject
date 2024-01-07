@@ -9,7 +9,7 @@ import 'package:wanandroidproject/app/enum/TabSubType.dart';
 
 import '../controllers/tabs_controller.dart';
 
-class TabsView extends BaseView<TabsController> {
+class TabsView extends GetView<TabsController> {
    TabsView({Key? key}) : super(key: key);
   // @override
   // Widget build(BuildContext context) {
@@ -58,13 +58,24 @@ class TabsView extends BaseView<TabsController> {
       BottomNavigationBarItem(icon: TabSubType.home.activeimage,label: TabSubType.home.title,activeIcon: TabSubType.home.image)];
   }
 
-  @override
+
   Widget buildContent() {
     // TODO: implement buildContent
     return IndexedStack(
       index: controller.currentIndex.value,
       children: controller.tablistPage,
     );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Obx(() {
+       return Scaffold(
+         body: buildContent(),
+         bottomNavigationBar: buildNavgationbar(),
+       );
+    });
   }
 
 }
